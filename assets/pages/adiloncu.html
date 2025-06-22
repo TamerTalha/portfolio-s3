@@ -20,8 +20,8 @@
                     <li><a href="beyond.html">BEYOND</a></li>
                     <li><a href="slaygency.html">SLAYGENCY</a></li>
                     <li><a href="adiloncu.html">ADİL ÖNCÜ</a></li>
-                    <li><a href="">BOARD GAME</a></li>
-                    <li><a href="">PORTFOLIO S3</a></li>
+                    <li><a href="board-game.html">BOARD GAME</a></li>
+                    <!-- <li><a href="">PORTFOLIO S3</a></li> -->
                 </ul>
             </li>
             <li><a href="los.html" class="textGradient">LOs</a></li>
@@ -139,14 +139,42 @@
 
 
         </section>
-    </main>
     <footer>
-        <h3>Still have some social <b class="textGradient">battery</b> left?</h3>
-        <h1>LET'S TALK!</h1>
-        <h2>INSTAGRAM</h2>
-        <h2>LINKEDIN</h2>
-        <h2 id="copyEmail">COPY EMAIL</h2>
-    </footer>
+            <h3>Still have some social <b class="textGradient">battery</b> left?</h3>
+            <h1>LET'S TALK!</h1>
+            <!-- <h2>INSTAGRAM</h2>
+            <h2>LINKEDIN</h2> -->
+            <h2 id="copyEmail">COPY EMAIL</h2>
+        </footer>
+
+        <script>
+
+            // COPY EMAIL FOOTER
+
+            const copyEmailEl = document.getElementById("copyEmail");
+
+  copyEmailEl.addEventListener("click", () => {
+    const email = "t.candemir@student.fontys.nl";
+    navigator.clipboard.writeText(email).then(() => {
+      // Store original text
+      const originalText = copyEmailEl.textContent;
+
+      // Apply styles and update text
+      copyEmailEl.textContent = "COPIED!";
+      copyEmailEl.style.backgroundColor = "#1e1e1e";
+      copyEmailEl.style.color = "#fff";
+
+      // Reset after 1.5 seconds
+      setTimeout(() => {
+        copyEmailEl.textContent = originalText;
+        copyEmailEl.style.backgroundColor = "";
+        copyEmailEl.style.color = "";
+      }, 1500);
+    });
+  });
+          </script>
+    </main>
+   
 </body>
 
 </html>
